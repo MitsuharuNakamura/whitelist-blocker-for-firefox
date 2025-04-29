@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { min-width: 200px; padding: 10px; font-family: sans-serif; }
+    input, textarea { width: 100%; box-sizing: border-box; }
+    button { margin-top: 5px; }
+    textarea { margin-top: 5px; }
+  </style>
+</head>
+<body>
+  <h3>Whitelist</h3>
+  <ul id="list"></ul>
+  <input type="text" id="newPattern" placeholder="Enter pattern (e.g. *://example.com/*)">
+  <button id="addBtn">Add</button>
+  <hr>
+  <h4>一括登録</h4>
+  <textarea id="bulkPatterns" rows="5" placeholder="1行に1つパターンを入力"></textarea>
+  <button id="bulkAddBtn">一括登録</button>
+  <script src="popup.js"></script>
+</body>
+</html>

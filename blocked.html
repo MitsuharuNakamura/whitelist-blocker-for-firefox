@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>アクセスがブロックされました</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #f8f8f8; }
+    h1 { color: #c00; }
+    a { word-break: break-all; }
+    button { margin-top: 1em; padding: 0.5em 1em; }
+  </style>
+</head>
+<body>
+  <h1>アクセスがブロックされました</h1>
+  <p>ドメイン: <span id="domain"></span></p>
+  <p>次の URL はホワイトリストに登録されていないため、アクセスできません。</p>
+  <p><a id="url" href="#" target="_blank"></a></p>
+  <button id="back">戻る</button>
+  <script src="blocked.js"></script>
+</body>
+</html>
