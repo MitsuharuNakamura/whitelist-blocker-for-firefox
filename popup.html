@@ -4,12 +4,15 @@
   <meta charset="utf-8">
   <style>
     body { min-width: 200px; padding: 10px; font-family: sans-serif; }
-    input, textarea { width: 100%; box-sizing: border-box; }
+    /* Only text inputs and textareas should be full-width */
+    input[type="text"], textarea { width: 100%; box-sizing: border-box; }
     button { margin-top: 5px; }
     textarea { margin-top: 5px; }
   </style>
 </head>
 <body>
+  <label for="toggleBlocking">ブロック機能を有効</label>
+  <input type="checkbox" id="toggleBlocking">
   <h3>Whitelist</h3>
   <ul id="list"></ul>
   <input type="text" id="newPattern" placeholder="Enter pattern (e.g. *://example.com/*)">

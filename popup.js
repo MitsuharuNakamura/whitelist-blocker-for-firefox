@@ -1,4 +1,15 @@
 (function() {
+  // Toggle blocking on/off
+  const toggleEl = document.getElementById('toggleBlocking');
+  if (toggleEl) {
+    browser.storage.local.get('enabled').then((result) => {
+      toggleEl.checked = result.enabled !== false;
+    });
+    toggleEl.addEventListener('change', () => {
+      browser.storage.local.set({ enabled: toggleEl.checked });
+    });
+  }
+  
   function escapeHtml(s) {
     return s.replace(/[&<>"']/g, (c) => ({
       '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
